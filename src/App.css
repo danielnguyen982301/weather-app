@@ -1,38 +1,95 @@
-.App {
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background: grey;
+}
+
+.container {
+  font-family: sans-serif;
+  background: rgba(0, 110, 255, 0.877);
+  max-width: 500px;
+  margin: 4rem auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span {
+  font-size: 1rem;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-form {
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-form input,
+.search-form .submit-btn {
+  height: 2rem;
+  margin: 0.5rem;
+}
+
+.search-form .submit-btn {
+  flex-shrink: 0;
+}
+
+.card-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.location {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.613);
+}
+
+.general-info {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.general-info img {
+  width: 50px;
+  height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.general-info span {
+  font-size: 1.5rem;
+  color: rgba(149, 255, 0, 0.632);
+}
+
+.main-info span {
+  font-weight: bold;
+}
+
+.other-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 3rem;
+  margin: 1rem;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
